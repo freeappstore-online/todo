@@ -1,0 +1,11 @@
+{
+  "name": "freetodoapp",
+  "private": true,
+  "packageManager": "pnpm@10.30.3",
+  "engines": { "node": ">=22" },
+  "pnpm": { "onlyBuiltDependencies": ["esbuild"] },
+  "scripts": {
+    "dev": "pnpm --filter @freetodoapp/web dev",
+    "build": "pnpm --filter @freetodoapp/web build"
+  }
+}

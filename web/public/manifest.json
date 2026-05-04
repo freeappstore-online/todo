@@ -1,0 +1,9 @@
+{
+  "name": "Todo",
+  "short_name": "Todo",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#1a1917",
+  "theme_color": "#1a1917",
+  "description": "Free Todo app — part of FreeAppStore"
+}
