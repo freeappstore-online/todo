@@ -92,15 +92,15 @@ export function App() {
             placeholder="What needs to be done?"
             className="flex-1 px-4 py-3 rounded-[var(--radius-btn)] border text-sm outline-none"
             style={{
-              borderColor: "var(--color-line)",
-              background: "var(--color-panel)",
-              color: "var(--color-ink)",
+              borderColor: "var(--line)",
+              background: "var(--panel)",
+              color: "var(--ink)",
             }}
           />
           <button
             type="submit"
             className="px-5 py-3 rounded-[var(--radius-btn)] text-sm font-semibold text-white shrink-0"
-            style={{ background: "var(--color-accent)" }}
+            style={{ background: "var(--accent)" }}
           >
             Add
           </button>
@@ -112,17 +112,17 @@ export function App() {
             <div
               key={todo.id}
               className="flex items-center gap-3 px-4 py-3 rounded-[var(--radius-card)] border"
-              style={{ borderColor: "var(--color-line)" }}
+              style={{ borderColor: "var(--line)" }}
             >
               <button
                 onClick={() => toggleTodo(todo.id)}
                 className="w-5 h-5 rounded-full border-2 shrink-0 flex items-center justify-center"
                 style={{
                   borderColor: todo.completed
-                    ? "var(--color-accent)"
-                    : "var(--color-line)",
+                    ? "var(--accent)"
+                    : "var(--line)",
                   background: todo.completed
-                    ? "var(--color-accent)"
+                    ? "var(--accent)"
                     : "transparent",
                 }}
               >
@@ -148,8 +148,8 @@ export function App() {
                 style={{
                   textDecoration: todo.completed ? "line-through" : "none",
                   color: todo.completed
-                    ? "var(--color-muted)"
-                    : "var(--color-ink)",
+                    ? "var(--muted)"
+                    : "var(--ink)",
                 }}
               >
                 {todo.text}
@@ -157,7 +157,7 @@ export function App() {
               <button
                 onClick={() => deleteTodo(todo.id)}
                 className="text-sm shrink-0 opacity-0 group-hover:opacity-100 hover:opacity-100 focus:opacity-100"
-                style={{ color: "var(--color-muted)" }}
+                style={{ color: "var(--muted)" }}
                 onPointerEnter={(e) => (e.currentTarget.style.opacity = "1")}
                 onPointerLeave={(e) => (e.currentTarget.style.opacity = "")}
               >
@@ -183,7 +183,7 @@ export function App() {
         {filtered.length === 0 && (
           <p
             className="text-center py-12 text-sm"
-            style={{ color: "var(--color-muted)" }}
+            style={{ color: "var(--muted)" }}
           >
             {filter === "all" && "No tasks yet. Add one above!"}
             {filter === "active" && "No active tasks. Nice work!"}
@@ -196,7 +196,7 @@ export function App() {
           <button
             onClick={clearCompleted}
             className="mt-4 text-xs hover:underline"
-            style={{ color: "var(--color-muted)" }}
+            style={{ color: "var(--muted)" }}
           >
             Clear {counts.completed} completed{" "}
             {counts.completed === 1 ? "task" : "tasks"}

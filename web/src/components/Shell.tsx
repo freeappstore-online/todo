@@ -30,8 +30,8 @@ function NavItem({
       onClick={onClick}
       className="flex items-center justify-between px-3 py-2 rounded-[var(--radius-btn)] text-sm font-medium transition-colors w-full text-left"
       style={{
-        background: active ? "var(--color-accent)" : "transparent",
-        color: active ? "#fff" : "var(--color-ink)",
+        background: active ? "var(--accent)" : "transparent",
+        color: active ? "#fff" : "var(--ink)",
       }}
     >
       <span>{label}</span>
@@ -54,8 +54,8 @@ export function Shell({ children, filter, onFilterChange, counts }: ShellProps) 
           className="flex flex-col border-r h-full shrink-0"
           style={{
             width: "17rem",
-            borderColor: "var(--color-line)",
-            background: "var(--color-panel)",
+            borderColor: "var(--line)",
+            background: "var(--panel)",
           }}
         >
           <div
@@ -77,14 +77,14 @@ export function Shell({ children, filter, onFilterChange, counts }: ShellProps) 
           </nav>
           <div
             className="p-4 text-xs"
-            style={{ color: "var(--color-muted)" }}
+            style={{ color: "var(--muted)" }}
           >
             <a
               href="https://freeappstore.online"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:underline"
-              style={{ color: "var(--color-muted)" }}
+              style={{ color: "var(--muted)" }}
             >
               Part of FreeAppStore — free forever
             </a>
@@ -98,8 +98,8 @@ export function Shell({ children, filter, onFilterChange, counts }: ShellProps) 
         <header
           className="flex items-center px-4 h-14 border-b shrink-0"
           style={{
-            borderColor: "var(--color-line)",
-            background: "var(--color-panel)",
+            borderColor: "var(--line)",
+            background: "var(--panel)",
           }}
         >
           <span
@@ -113,8 +113,8 @@ export function Shell({ children, filter, onFilterChange, counts }: ShellProps) 
         <nav
           className="flex items-center justify-around h-14 border-t shrink-0"
           style={{
-            borderColor: "var(--color-line)",
-            background: "var(--color-panel)",
+            borderColor: "var(--line)",
+            background: "var(--panel)",
           }}
         >
           {filters.map((f) => (
@@ -125,8 +125,8 @@ export function Shell({ children, filter, onFilterChange, counts }: ShellProps) 
               style={{
                 color:
                   filter === f.key
-                    ? "var(--color-accent)"
-                    : "var(--color-muted)",
+                    ? "var(--accent)"
+                    : "var(--muted)",
               }}
             >
               <span>{f.label}</span>

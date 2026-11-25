@@ -3,23 +3,36 @@
 @theme {
   --font-body: "Manrope", system-ui, sans-serif;
   --font-display: "Fraunces", Georgia, serif;
-  --color-accent: #2563eb;
-  --color-paper: #fefdfb;
-  --color-ink: #1a1917;
-  --color-muted: #8a8780;
-  --color-line: #e8e5e0;
-  --color-panel: #f5f3f0;
   --radius-card: 1.25rem;
   --radius-btn: 0.75rem;
 }
 
+/* Brand tokens (--paper, --ink, --accent, …) drive the Tailwind colours. */
+@theme inline {
+  --color-accent: var(--accent);
+  --color-paper: var(--paper);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --color-panel: var(--panel);
+}
+
+:root {
+  --accent: #2563eb;
+  --paper: #fefdfb;
+  --ink: #1a1917;
+  --muted: #8a8780;
+  --line: #e8e5e0;
+  --panel: #f5f3f0;
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
-    --color-paper: #0f0f0e;
-    --color-ink: #f2f0ed;
-    --color-muted: #7a7770;
-    --color-line: #2a2825;
-    --color-panel: #1a1918;
+    --paper: #0f0f0e;
+    --ink: #f2f0ed;
+    --muted: #7a7770;
+    --line: #2a2825;
+    --panel: #1a1918;
   }
 }
 
@@ -29,8 +42,8 @@ html, body, #root {
   margin: 0;
   height: 100%;
   font-family: var(--font-body);
-  background: var(--color-paper);
-  color: var(--color-ink);
+  background: var(--paper);
+  color: var(--ink);
   -webkit-font-smoothing: antialiased;
   -webkit-user-select: none;
   user-select: none;
