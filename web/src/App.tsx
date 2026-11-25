@@ -111,7 +111,7 @@ export function App() {
           {filtered.map((todo) => (
             <div
               key={todo.id}
-              className="flex items-center gap-3 px-4 py-3 rounded-[var(--radius-card)] border"
+              className="group flex items-center gap-3 px-4 py-3 rounded-[var(--radius-card)] border"
               style={{ borderColor: "var(--line)" }}
             >
               <button
@@ -156,7 +156,7 @@ export function App() {
               </span>
               <button
                 onClick={() => deleteTodo(todo.id)}
-                className="text-sm shrink-0 opacity-0 group-hover:opacity-100 hover:opacity-100 focus:opacity-100"
+                className="text-sm shrink-0 [@media(hover:hover)]:opacity-0 group-hover:opacity-100 hover:opacity-100 focus:opacity-100"
                 style={{ color: "var(--muted)" }}
                 onPointerEnter={(e) => (e.currentTarget.style.opacity = "1")}
                 onPointerLeave={(e) => (e.currentTarget.style.opacity = "")}
